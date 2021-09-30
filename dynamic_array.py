@@ -2,15 +2,10 @@
 # Your implementation should pass the tests in test_dynamic_array.py.
 # YOUR NAME
 
-
-
 class DynamicArray:
+    capacity = 10
     
     def __init__(self):
-        self.size = 10
-
-    def is_empty(self):
-        if self.len() == 0:
-            return True
+        self.capacity = 10
 
     
