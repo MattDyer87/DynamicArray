@@ -28,7 +28,7 @@ class TestDynamicArray(unittest.TestCase):
         The default initial capacity is ten.
         """
         a = DynamicArray()
-        self.assertEqual(10, a.size)
+        self.assertEqual(10, a.capacity)
 
     def test_initially_empty(self):
         """
@@ -94,13 +94,13 @@ class TestDynamicArray(unittest.TestCase):
     #     a = DynamicArray()
     #     self.assertEqual('O', a.data.dtype)
 
-    # def test_data_size(self):
+    # def test_data_capacity(self):
     #     """
     #     Length of the data array is the same as the DynamicArray capacity.
     #     """
     #     import numpy as np # Hint: Get an error? Just `pip3 install numpy`
     #     a = DynamicArray()
-    #     self.assertEqual(len(a.data), a.size)
+    #     self.assertEqual(len(a.data), a.capacity)
 
     # # """
     # # Guiding appending and retrieving one value.
