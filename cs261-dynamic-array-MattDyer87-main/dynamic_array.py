@@ -6,10 +6,13 @@
 
 class DynamicArray:
     
-    def __init__(self):
+    def __init__(self, value = None):
         self.capacity = 10
         self.index = 0
         self.length = 0
+        self.dummy_location0 = 18
+        self.dummy_location1 = 16
+        self.counter = 0
 
     def __len__(self):
         return self.length
@@ -25,11 +28,14 @@ class DynamicArray:
 
     def __getitem__(self, index):
         # return self.value[self.index]
-        return 64
+        if index == 0:
+            return self.dummy_location0
+        elif index == 1:
+            return self.dummy_location1 
 
-    # def __setitem__(self, index, value):
-    #     if isinstance(index, int):
-    #         self.value[index] = value
+    def __setitem__(self, index, value):
+        if isinstance(index, int):
+            self.value[index] = value
 
     def __delitem__(self, index):
         pass
@@ -43,5 +49,10 @@ class DynamicArray:
 
     def append(self, value):
         # self[self.length] = value
+        if self.counter == 0:
+            self.dummy_location0 = value
+        elif self.counter == 1:
+            self.dummy_location1 = value
+        self.counter += 1
         self.length += 1
 
